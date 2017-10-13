@@ -86,7 +86,12 @@ endef
 config_files=oscam.conf oscam.dvbapi oscam.server oscam.services oscam.srvid oscam.user
 
 define Package/oscam/conffiles
-/etc/config/oscam/
+/etc/config/oscam/scam.conf
+/etc/config/oscam/oscam.dvbapi
+/etc/config/oscam/oscam.server
+/etc/config/oscam/oscam.services
+/etc/config/oscam/oscam.srvid
+/etc/config/oscam/oscam.user
 endef
 
 define Package/oscam
