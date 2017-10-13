@@ -180,7 +180,7 @@ ifeq ($(CONFIG_OSCAM_WITH_SSL),y)
 	MAKE_FLAGS += USE_SSL=1
 endif
 
-MAKE_FLAGS += CONF_DIR=/etc/oscam
+MAKE_FLAGS += CONF_DIR=/etc/config/oscam
 MAKE_FLAGS += OSCAM_BIN=Distribution/oscam
 MAKE_FLAGS += LIST_SMARGO_BIN=Distribution/list-smargo
 
@@ -188,8 +188,8 @@ MAKE_FLAGS += LIST_SMARGO_BIN=Distribution/list-smargo
 define Package/oscam/install
 	$(INSTALL_DIR) $(1)/usr/sbin
 	$(INSTALL_BIN) $(PKG_BUILD_DIR)/Distribution/oscam $(1)/usr/sbin/oscam
-	$(INSTALL_DIR) $(1)/etc/oscam
-	$(INSTALL_DATA) $(addprefix $(PKG_BUILD_DIR)/Distribution/doc/example/,$(config_files)) $(1)/etc/oscam/
+	$(INSTALL_DIR) $(1)/etc/config/oscam
+	$(INSTALL_DATA) $(addprefix $(PKG_BUILD_DIR)/Distribution/doc/example/,$(config_files)) $(1)/etc/config/oscam/
 	$(INSTALL_DIR) $(1)/etc/init.d
 	$(INSTALL_BIN) ./files/oscam.init $(1)/etc/init.d/oscam
 endef
