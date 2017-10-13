@@ -83,10 +83,10 @@ define Package/oscam/config
 	source "$(SOURCE)/Config.in"
 endef
 
-config_files=oscam.ac oscam.cacheex oscam.cert oscam.conf oscam.dvbapi oscam.guess oscam.ird oscam.provid oscam.server oscam.services oscam.srvid oscam.tiers oscam.user oscam.whitelist
+config_files=oscam.conf oscam.dvbapi oscam.server oscam.services oscam.srvid2 oscam.user
 
 define Package/oscam/conffiles
-/etc/oscam/
+/etc/config/oscam/
 endef
 
 define Package/oscam
